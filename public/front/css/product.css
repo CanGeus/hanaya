@@ -1,0 +1,109 @@
+.jumbotron {
+    display: flex;
+    justify-content: end;
+    max-height: fit-content;
+}
+.jumbotron .card{
+    border-radius: 18px;
+    border: unset;
+}
+@media (max-width: 428px) {
+    .jumbotron {
+        flex-direction: column;
+        background-color: var(--hny-dark) !important;
+    }
+    .jumbotron .card{
+        margin: -50px 15px 0 15px;
+        position: static;
+        padding: 28px;
+        /* width: 100%; */
+        left: 0;
+    }
+}
+@media (min-width: 429px) {
+        .jumbotron {
+            flex-direction: column;
+            background-color: var(--hny-dark) !important;
+        }
+
+        .jumbotron img{
+            padding-left: 100px;
+        }
+    
+        .jumbotron .card {
+            margin: -100px 15px 0 15px;
+            position: static;
+            padding: 28px;
+            /* width: 100%; */
+            left: 0;
+        }
+}
+
+@media (min-width: 1024px) {
+.jumbotron .card {
+        width: 640px;
+        position: absolute;
+        left: 25%;
+        top: 55%;
+        transform: translate(-40%, -20%);
+        padding: 48px;
+    }
+    .jumbotron img{
+        padding-left: 200px;
+    }
+}
+.jumbotron .card h2{
+    font-weight: 600 !important;
+}
+
+.client {
+    padding: 50px 0;
+
+}
+.client .logo {
+    animation: infinite-scroll 15s linear infinite;
+    padding: 2rem;
+}
+
+.story {
+}
+.story .scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-color: transparent transparent;
+}
+.story .scroll-container img {
+    margin: 10px;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    scroll-snap-align: center;
+}
+
+.price .card {
+    border-radius: 18px;
+    padding: 24px 32px;
+}
+
+/* product */
+/* starlink */
+.product .card {
+    padding: 32px !important;
+    border-radius: 18px;
+}
+
+@keyframes infinite-scroll {
+    form {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.client .logo img {
+    height: 3rem;
+    filter: grayscale(100%) invert(100%);
+}
